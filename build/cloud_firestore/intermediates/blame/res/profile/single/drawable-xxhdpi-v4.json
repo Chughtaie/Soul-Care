@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\Mr.Chughtai\\AndroidStudioProjects\\flash-chat-flutter\\build\\cloud_firestore\\intermediates\\res\\merged\\profile\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "C:\\Users\\Mr.Chughtai\\.gradle\\caches\\transforms-2\\files-2.1\\1adbe1ba5119fa83ddd12136fc967998\\play-services-base-17.1.0\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Mr.Chughtai\\AndroidStudioProjects\\flash-chat-flutter\\build\\cloud_firestore\\intermediates\\res\\merged\\profile\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "C:\\Users\\Mr.Chughtai\\.gradle\\caches\\transforms-2\\files-2.1\\1adbe1ba5119fa83ddd12136fc967998\\play-services-base-17.1.0\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Mr.Chughtai\\AndroidStudioProjects\\flash-chat-flutter\\build\\cloud_firestore\\intermediates\\res\\merged\\profile\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png",
+        "source": "C:\\Users\\Mr.Chughtai\\.gradle\\caches\\transforms-2\\files-2.1\\1adbe1ba5119fa83ddd12136fc967998\\play-services-base-17.1.0\\res\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "C:\\Users\\Mr.Chughtai\\AndroidStudioProjects\\flash-chat-flutter\\build\\cloud_firestore\\intermediates\\res\\merged\\profile\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "C:\\Users\\Mr.Chughtai\\.gradle\\caches\\transforms-2\\files-2.1\\1adbe1ba5119fa83ddd12136fc967998\\play-services-base-17.1.0\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Mr.Chughtai\\AndroidStudioProjects\\flash-chat-flutter\\build\\cloud_firestore\\intermediates\\res\\merged\\profile\\drawable-xxhdpi-v4\\googleg_standard_color_18.png",
+        "source": "C:\\Users\\Mr.Chughtai\\.gradle\\caches\\transforms-2\\files-2.1\\1adbe1ba5119fa83ddd12136fc967998\\play-services-base-17.1.0\\res\\drawable-xxhdpi-v4\\googleg_standard_color_18.png"
+    },
+    {
+        "merged": "C:\\Users\\Mr.Chughtai\\AndroidStudioProjects\\flash-chat-flutter\\build\\cloud_firestore\\intermediates\\res\\merged\\profile\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "C:\\Users\\Mr.Chughtai\\.gradle\\caches\\transforms-2\\files-2.1\\1adbe1ba5119fa83ddd12136fc967998\\play-services-base-17.1.0\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+    }
+]

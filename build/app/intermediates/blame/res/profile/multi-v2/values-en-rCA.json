@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Mr.Chughtai\\AndroidStudioProjects\\flash-chat-flutter\\build\\app\\intermediates\\incremental\\mergeProfileResources\\merged.dir\\values-en-rCA\\values-en-rCA.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Mr.Chughtai\\.gradle\\caches\\transforms-2\\files-2.1\\b8d7b6426ea4582f6d90da6e770666e8\\core-1.2.0\\res\\values-en-rCA\\values-en-rCA.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}
