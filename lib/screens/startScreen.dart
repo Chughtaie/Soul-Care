@@ -1,9 +1,10 @@
+import 'package:flash_chat/Theme.dart';
 import 'package:flash_chat/screens/nav.dart';
 import 'package:flash_chat/screens/welcome_screen.dart';
 import 'package:flash_chat/utilities/tasbeeh.dart';
 import 'package:flutter/material.dart';
 
-var colr = Colors.blue;
+Color colr = Colors.blue;
 
 class lightMode extends StatefulWidget {
   static const id = 'lightMode';
@@ -15,12 +16,14 @@ class _lightModeState extends State<lightMode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xF8E8D3F8),
+      backgroundColor: colr,
       appBar: AppBar(
         backgroundColor: Color(0xF89456C1),
         leading: IconButton(
-          onPressed: () {
-            NavBar();
+          onPressed: () async {
+            setState() {}
+            Color colre = await Navigator.pushNamed(context, themeScreen.id);
+            colr = colre;
           },
           icon: Icon(Icons.menu, size: 40),
         ),

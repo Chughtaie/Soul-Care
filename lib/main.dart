@@ -8,6 +8,8 @@ import 'package:flash_chat/screens/login_screen.dart';
 import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flash_chat/screens/chat_screen.dart';
 
+import 'Theme.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -25,6 +27,7 @@ class FlashChat extends StatelessWidget {
       ),
       initialRoute: lightMode.id,
       routes: {
+        themeScreen.id: (context) => themeScreen(),
         home.id: (context) => home(),
         lightMode.id: (context) => lightMode(),
         WelcomeScreen.id: (context) => WelcomeScreen(),

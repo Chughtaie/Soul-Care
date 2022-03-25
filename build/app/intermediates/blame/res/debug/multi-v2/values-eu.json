@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Mr.Chughtai\\AndroidStudioProjects\\flash-chat-1\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-eu\\values-eu.xml",
+            "outputFile": "C:\\Users\\Mr.Chughtai\\AndroidStudioProjects\\Soul_Care\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-eu\\values-eu.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Mr.Chughtai\\.gradle\\caches\\transforms-2\\files-2.1\\1adbe1ba5119fa83ddd12136fc967998\\play-services-base-17.1.0\\res\\values-eu\\values.xml",
