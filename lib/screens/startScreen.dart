@@ -21,9 +21,12 @@ class _lightModeState extends State<lightMode> {
         backgroundColor: Color(0xF89456C1),
         leading: IconButton(
           onPressed: () async {
-            setState() {}
-            Color colre = await Navigator.pushNamed(context, themeScreen.id);
-            colr = colre;
+            var colrr = await Navigator.pushNamed(context, themeScreen.id);
+            print('ndajkdn   ' + colrr.toString());
+            setState(() {
+              colr = null;
+              colr = colrr;
+            });
           },
           icon: Icon(Icons.menu, size: 40),
         ),
