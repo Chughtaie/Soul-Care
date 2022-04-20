@@ -19,7 +19,8 @@ dependencies:
   firebase_storage: ^10.2.6
   modal_bottom_sheet: ^2.0.0
   geolocator: ^7.6.0
-  flutter_qiblah: ^2.0.2
+  flutter_local_notifications: ^9.4.0
+  adhan: ^1.1.16
   
 dev_dependencies:
   flutter_test:

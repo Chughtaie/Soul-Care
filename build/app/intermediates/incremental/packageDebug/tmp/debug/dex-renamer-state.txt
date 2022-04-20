@@ -1,8 +1,7 @@
-#Fri Mar 25 19:20:18 PKT 2022
+#Wed Apr 20 22:29:53 PKT 2022
 path.4=classes_1.dex
 path.3=classes_0.dex
 path.2=classes2.dex
-renamed.9=classes10.dex
 path.1=classes.dex
 renamed.8=classes9.dex
 path.8=classes_5.dex
@@ -19,8 +18,6 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.9=C\:\\Users\\Mr.Chughtai\\AndroidStudioProjects\\Soul_Care\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\out\\classes_6.dex
-path.9=classes_6.dex
 renamed.7=classes8.dex
 base.8=C\:\\Users\\Mr.Chughtai\\AndroidStudioProjects\\Soul_Care\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\out\\classes_5.dex
 renamed.6=classes7.dex

@@ -4,24 +4,7 @@
             "outputFile": "C:\\Users\\Mr.Chughtai\\AndroidStudioProjects\\Soul_Care\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-te\\values-te.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Mr.Chughtai\\.gradle\\caches\\transforms-2\\files-2.1\\d526f3179f33f6527ca488baf486bfd0\\play-services-basement-18.0.0\\res\\values-te\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "135",
-                        "endOffsets": "330"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1239",
-                        "endColumns": "139",
-                        "endOffsets": "1374"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Mr.Chughtai\\.gradle\\caches\\transforms-2\\files-2.1\\b8d7b6426ea4582f6d90da6e770666e8\\core-1.2.0\\res\\values-te\\values-te.xml",
+                    "source": "C:\\Users\\Mr.Chughtai\\.gradle\\caches\\transforms-2\\files-2.1\\df53a9d3ce3330e9b3983a53bcba74bb\\core-1.6.0\\res\\values-te\\values-te.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Mr.Chughtai\\.gradle\\caches\\transforms-2\\files-2.1\\1adbe1ba5119fa83ddd12136fc967998\\play-services-base-17.1.0\\res\\values-te\\values.xml",
+                    "source": "C:\\Users\\Mr.Chughtai\\.gradle\\caches\\transforms-2\\files-2.1\\11f20f6a45d3639cad92039b37dd6709\\play-services-base-17.1.0\\res\\values-te\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,6 +35,23 @@
                         "startOffsets": "105,217,403,535,652,848,975,1110,1379,1587,1701,1885,2015,2225,2418,2512,2612",
                         "endColumns": "111,185,131,116,195,126,134,128,207,113,183,129,209,192,93,99,110",
                         "endOffsets": "212,398,530,647,843,970,1105,1234,1582,1696,1880,2010,2220,2413,2507,2607,2718"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Mr.Chughtai\\.gradle\\caches\\transforms-2\\files-2.1\\6e1d78f6aedec31291c2ccc79c4c7443\\play-services-basement-18.0.0\\res\\values-te\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "135",
+                        "endOffsets": "330"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1239",
+                        "endColumns": "139",
+                        "endOffsets": "1374"
                     }
                 }
             ]

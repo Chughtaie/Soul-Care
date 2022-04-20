@@ -1,14 +1,16 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flash_chat/screens/friend_screen.dart';
-import 'package:flash_chat/screens/startScreen.dart';
-import 'package:flash_chat/utilities/tasbeeh.dart';
+import 'package:flash_chat/screens/zakat_calculate.dart';
 import 'package:flutter/material.dart';
-import 'package:flash_chat/screens/welcome_screen.dart';
-import 'package:flash_chat/screens/login_screen.dart';
-import 'package:flash_chat/screens/registration_screen.dart';
-import 'package:flash_chat/screens/chat_screen.dart';
+import 'screens/friend_screen.dart';
+import 'screens/startScreen.dart';
+import 'utilities/tasbeeh.dart';
+import 'screens/welcome_screen.dart';
+import 'screens/login_screen.dart';
+import 'screens/registration_screen.dart';
+import 'screens/chat_screen.dart';
 
 import 'Theme.dart';
+import 'utilities/qibla.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,6 +37,8 @@ class FlashChat extends StatelessWidget {
         LoginScreen.id: (context) => LoginScreen(),
         RegistrationScreen.id: (context) => RegistrationScreen(),
         ChatScreen.id: (context) => ChatScreen(),
+        Zakat.id: (context) => Zakat(),
+        //Qiblaa.id: (context) => Qiblaa(),
       },
     );
   }

@@ -1,8 +1,12 @@
-import 'package:flash_chat/Theme.dart';
-import 'package:flash_chat/screens/nav.dart';
-import 'package:flash_chat/screens/welcome_screen.dart';
-import 'package:flash_chat/utilities/tasbeeh.dart';
+import 'package:flash_chat/utilities/zakatCalculator.dart';
+
+import '../Theme.dart';
+import '../screens/welcome_screen.dart';
+import '../utilities/qibla.dart';
+import '../utilities/tasbeeh.dart';
 import 'package:flutter/material.dart';
+
+import 'zakat_calculate.dart';
 
 Color colr = Colors.blue;
 
@@ -56,20 +60,29 @@ class _lightModeState extends State<lightMode> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 FlatButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, WelcomeScreen.id);
-                    },
-                    child: Icon(Icons.forum_outlined, size: 43)),
+                  onPressed: () {
+                    Navigator.pushNamed(context, WelcomeScreen.id);
+                  },
+                  child: Icon(Icons.forum_outlined, size: 43),
+                ),
                 FlatButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, home.id);
-                    },
-                    child: Icon(Icons.touch_app_outlined, size: 43)),
+                  onPressed: () {
+                    Navigator.pushNamed(context, home.id);
+                  },
+                  child: Icon(Icons.touch_app_outlined, size: 43),
+                ),
                 FlatButton(
-                    onPressed: () {
-                      //Navigator.pushNamed(context, home.id);
-                    },
-                    child: Icon(Icons.explore_outlined, size: 43))
+                  onPressed: () {
+                    //Navigator.pushNamed(context, Qiblaa.id);
+                  },
+                  child: Icon(Icons.explore_outlined, size: 43),
+                ),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, Zakat.id);
+                  },
+                  child: Icon(Icons.explore_outlined, size: 43),
+                )
               ],
             ),
             color: Color(0xFFD8B0F0),
