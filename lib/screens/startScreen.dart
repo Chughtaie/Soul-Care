@@ -81,7 +81,7 @@ class _lightModeState extends State<lightMode> {
                   onPressed: () {
                     Navigator.pushNamed(context, Zakat.id);
                   },
-                  child: Icon(Icons.explore_outlined, size: 43),
+                  child: Icon(Icons.monetization_on_outlined, size: 43),
                 )
               ],
             ),

@@ -36,6 +36,7 @@ class _ZakatState extends State<Zakat> {
     var _controller3 = TextEditingController();
     return Scaffold(
       body: Container(
+        color: Colors.lightBlue,
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -43,17 +44,24 @@ class _ZakatState extends State<Zakat> {
               SizedBox(
                 height: 30,
               ),
+              Text(
+                "Zakat Calculator",
+                style: TextStyle(
+                    fontSize: 30, color: Color.fromARGB(255, 235, 35, 185)),
+              ),
+              SizedBox(
+                height: 20,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    "Zakat Calculator",
-                    style: TextStyle(fontSize: 20),
+                    "Commodity Type",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                        color: Color.fromARGB(255, 74, 238, 74)),
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text("type"),
                   SizedBox(
                     height: 30,
                   ),
@@ -61,10 +69,11 @@ class _ZakatState extends State<Zakat> {
                     value: dropdownValue,
                     icon: const Icon(Icons.arrow_downward),
                     elevation: 16,
-                    style: const TextStyle(color: Colors.deepPurple),
+                    style: const TextStyle(
+                        color: Color.fromARGB(255, 218, 25, 83), fontSize: 20),
                     underline: Container(
                       height: 2,
-                      color: Colors.deepPurpleAccent,
+                      color: Colors.black,
                     ),
                     onChanged: (String newValue) {
                       //print(name + newValue);
@@ -101,8 +110,8 @@ class _ZakatState extends State<Zakat> {
               SizedBox(height: 20),
               CustomComodity(
                 controller: _controller2,
-                name: "Price Per Unit",
-                hint: "150000 (Rupee)",
+                name: " Price Per Unit",
+                hint: "150000 ( Rs. )",
                 onChange: (String val) {
                   pricePerUnit = (val);
                 },
@@ -110,14 +119,22 @@ class _ZakatState extends State<Zakat> {
               SizedBox(height: 20),
               CustomComodity(
                 controller: _controller3,
-                name: "Units",
-                hint: "7.5",
+                name: "Available Units",
+                hint: "7.5 ( Tola / Unused Cars )",
                 onChange: (String val) {
                   units = (val);
                 },
               ),
               SizedBox(height: 20),
-              Text("Price = " + zakat.calZakat().toString()),
+              Container(
+                  padding:
+                      EdgeInsets.only(top: 10, bottom: 10, left: 10, right: 10),
+                  color: Colors.cyan,
+                  child: Text(
+                    "Price = " + zakat.calZakat().toString(),
+                    style: TextStyle(
+                        fontSize: 20, color: Color.fromARGB(255, 60, 21, 235)),
+                  )),
               SizedBox(height: 20),
               RoundButtons(
                 colr: Colors.black,
@@ -176,6 +193,10 @@ class _ZakatState extends State<Zakat> {
                                   .getComodities()[index]
                                   .getValue()
                                   .toString(),
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.purple),
                         ),
                         onTap: () {},
                       );
@@ -186,7 +207,9 @@ class _ZakatState extends State<Zakat> {
                 height: 20,
               ),
               Text(
-                  "Payable Zakat = " + (zakat.calZakat() * (0.025)).toString()),
+                "Payable Zakat = " + (zakat.calZakat() * (0.025)).toString(),
+                style: TextStyle(fontSize: 30, color: Colors.amberAccent),
+              ),
             ],
           ),
         ),
@@ -212,7 +235,10 @@ class CustomComodity extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(name),
+        Text(
+          name,
+          style: TextStyle(fontSize: 20),
+        ),
         CustomTextField(
           controller: controller,
           hintText: hint,
