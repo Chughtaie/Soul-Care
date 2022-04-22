@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flash_chat/Widgets/Rounded_buttons.dart';
 import 'package:flash_chat/utilities/commodities.dart';
 import 'package:flash_chat/utilities/zakatCalculator.dart';
@@ -14,15 +17,19 @@ class Zakat extends StatefulWidget {
   State<Zakat> createState() => _ZakatState();
 }
 
+final fireStore = FirebaseFirestore.instance;
+
 class _ZakatState extends State<Zakat> {
   ZakatCalculator zakat = new ZakatCalculator();
-
+  List<String> comms = ["Gold", "Silver", "Plot", "Money", "Other"];
+  var dropdownValue = "Gold";
+  String name = "Gold";
+  String oname;
+  String price = "";
+  String units;
+  String pricePerUnit;
   @override
   Widget build(BuildContext context) {
-    String name;
-    String price;
-    String units;
-    String pricePerUnit;
     var _controller = TextEditingController();
     var _controller1 = TextEditingController();
     var _controller2 = TextEditingController();
@@ -36,21 +43,61 @@ class _ZakatState extends State<Zakat> {
               SizedBox(
                 height: 30,
               ),
-              CustomComodity(
-                controller: _controller,
-                onChange: (String val) {
-                  name = val;
-                },
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    "Zakat Calculator",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text("type"),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  DropdownButton<String>(
+                    value: dropdownValue,
+                    icon: const Icon(Icons.arrow_downward),
+                    elevation: 16,
+                    style: const TextStyle(color: Colors.deepPurple),
+                    underline: Container(
+                      height: 2,
+                      color: Colors.deepPurpleAccent,
+                    ),
+                    onChanged: (String newValue) {
+                      //print(name + newValue);
+                      setState(() {
+                        dropdownValue = newValue;
+                        name = newValue;
+                        print(name);
+                      });
+                    },
+                    items: comms.map<DropdownMenuItem<String>>((String myval) {
+                      return DropdownMenuItem<String>(
+                        onTap: () {
+                          //print("MY Value");
+                        },
+                        value: myval.toString(),
+                        child: Text(myval),
+                      );
+                    }).toList(),
+                  ),
+                ],
               ),
-              SizedBox(height: 20),
-              CustomComodity(
-                controller: _controller1,
-                name: "Total Price",
-                hint: "1000 (Rupee)",
-                onChange: (String val) {
-                  price = (val);
-                },
-              ),
+              if (dropdownValue == "Other")
+                SizedBox(
+                  height: 30,
+                ),
+              if (dropdownValue == "Other")
+                CustomComodity(
+                  hint: "Other Item",
+                  controller: _controller,
+                  onChange: (String val) {
+                    oname = val;
+                  },
+                ),
               SizedBox(height: 20),
               CustomComodity(
                 controller: _controller2,
@@ -64,57 +111,82 @@ class _ZakatState extends State<Zakat> {
               CustomComodity(
                 controller: _controller3,
                 name: "Units",
-                hint: "7.5 (tola)",
+                hint: "7.5",
                 onChange: (String val) {
                   units = (val);
                 },
               ),
               SizedBox(height: 20),
+              Text("Price = " + zakat.calZakat().toString()),
+              SizedBox(height: 20),
               RoundButtons(
-                  colr: Colors.black,
-                  onPressed: () {
-                    Comodity comodity;
-                    bool val = true;
-                    try {
-                      comodity = new Comodity(
-                        name: name,
-                        price: double.parse(price),
-                        pricePerUnit: double.parse(pricePerUnit),
-                        units: double.parse(units),
-                      );
-                    } catch (NumberFormatException) {
-                      val = false;
-                    }
-                    if (val) {
-                      setState(() {
-                        zakat.addComodity(comodity);
-                        _controller.clear();
-                        _controller1.clear();
-                        _controller2.clear();
-                        _controller3.clear();
-                      });
-                    }
-                  },
-                  text: "Enter the Commodity "),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: zakat.getComodities().length,
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      title: Text(
-                        zakat.getComodities()[index].name +
-                            '\t\t' +
-                            zakat.getComodities()[index].getValue().toString(),
-                      ),
-                      onTap: () {},
+                colr: Colors.black,
+                onPressed: () async {
+                  //await writeFile("Gold 7.5\nSilver 52\n");
+                  //String value = await (readFile());
+                  //print(value);
+                  print("MYYBCDBs");
+                  Comodity comodity;
+                  bool val = true;
+                  try {
+                    print("lol");
+                    print(name);
+                    var snapshot = fireStore.collection('Nisaab').doc(name);
+                    //snapshots();
+                    String nisaab;
+                    await snapshot
+                        //.doc(name)
+                        .get()
+                        .then((value) => nisaab = (value['nisaab']));
+
+                    comodity = new Comodity(
+                      name: name == "Other" ? oname : name,
+                      nisaab: double.parse(nisaab),
+                      pricePerUnit: double.parse(pricePerUnit),
+                      units: double.parse(units),
                     );
-                  },
-                ),
+                  } catch (NumberFormatException) {
+                    print("Database Error");
+                    val = false;
+                  }
+                  if (val) {
+                    setState(() {
+                      //writeFile("Gold 7.5\nSilver 52\n");
+
+                      zakat.addComodity(comodity);
+                      _controller.clear();
+                      _controller1.clear();
+                      _controller2.clear();
+                      _controller3.clear();
+                    });
+                  }
+                },
+                text: "Enter the Commodity ",
               ),
+              if (zakat.getComodities().length > 0)
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: zakat.getComodities().length,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        title: Text(
+                          zakat.getComodities()[index].name +
+                              '\t\t' +
+                              zakat
+                                  .getComodities()[index]
+                                  .getValue()
+                                  .toString(),
+                        ),
+                        onTap: () {},
+                      );
+                    },
+                  ),
+                ),
               SizedBox(
                 height: 20,
               ),
-              Text("Payable Zakat = " + zakat.calZakat().toString())
+              Text(
+                  "Payable Zakat = " + (zakat.calZakat() * (0.025)).toString()),
             ],
           ),
         ),

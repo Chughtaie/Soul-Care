@@ -383,10 +383,10 @@
       "name": "flash_chat",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "2.2"
     }
   ],
-  "generated": "2022-04-20T14:32:33.951411Z",
+  "generated": "2022-04-21T07:51:06.334911Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }

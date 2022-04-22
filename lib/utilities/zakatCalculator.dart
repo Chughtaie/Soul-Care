@@ -17,6 +17,6 @@ class ZakatCalculator {
   double calZakat() {
     double zakat = 0;
     for (Comodity i in comodities) zakat += i.getValue();
-    return zakat * 0.025;
+    return zakat;
   }
 }
