@@ -207,7 +207,8 @@ class _ZakatState extends State<Zakat> {
                 height: 20,
               ),
               Text(
-                "Payable Zakat = " + (zakat.calZakat() * (0.025)).toString(),
+                "Payable Zakat = " +
+                    (zakat.calZakat() * (0.025)).roundToDouble().toString(),
                 style: TextStyle(fontSize: 30, color: Colors.amberAccent),
               ),
             ],

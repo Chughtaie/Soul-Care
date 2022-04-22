@@ -13,7 +13,8 @@ class Comodity {
       this.nisaab = 1});
 
   double getValue() {
-    print(units + nisaab + pricePerUnit);
-    return (units - nisaab) * pricePerUnit;
+    //print(units + nisaab + pricePerUnit);
+    double val = (units - nisaab);
+    return (val < 0 ? 0 : val) * pricePerUnit;
   }
 }
